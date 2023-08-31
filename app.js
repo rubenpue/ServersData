@@ -1,7 +1,7 @@
 import { google } from 'googleapis'
 import fs from 'fs'
 import 'dotenv/config'
-
+// test
 const SCOPES = ['https://www.googleapis.com/auth/spreadsheets']
 const content = fs.readFileSync('./turing-mark-356110-abe2a5dacd4b.json')
 const auth = new google.auth.GoogleAuth({
@@ -111,7 +111,6 @@ const cursos_en_marcha = 'search?jql=project = "Gestión de cursos" AND "Start d
 const cursos_no_iniciados = 'search?jql=project = "Gestión de cursos" AND "Start date[Date]" > startOfDay() and status = "EN PROGRESO" and type = Epic'
 const cursos_por_confirmar = 'search?jql=project = "Gestión de cursos" AND status = "POR CONFIRMAR" AND type =Epic'
 const instalaciones = 'search?jql=project = "Gestión de cursos" AND "Start date[Date]" <= startOfDay()  AND duedate >= startOfDay()  AND status != FINALIZADO and type = "Instalación curso"'
-
 */
 
 const desaprovisionamiento = 'search?jql=project = "Gestión de cursos" AND status != FINALIZADO and type = "Desaprovisionamiento curso" ORDER BY cf[10305]&startAt=0&maxResults=100'
